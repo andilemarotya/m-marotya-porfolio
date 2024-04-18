@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .timeline {
+        @apply
+            border-l-4 border-white
+            ml-3  
+
+    }
+
+    .timeline-course {
+        @apply
+            font-bold
+    }
+
+    .dot {
+        @apply
+
+            absolute top-[-0.5rem] -left-2.5
+            bg-white
+            h-4 w-4
+            rounded-full
+            border-spacing-4
+    }
+}

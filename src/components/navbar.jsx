@@ -3,13 +3,14 @@ import { Link } from 'react-scroll';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    <nav className="bg-gray-900">
+    <nav className="bg-gray-900 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-center h-16 items-center">
           {/* Menu button (hamburger icon) */}
@@ -43,51 +44,60 @@ const Navbar = () => {
           </div>
           {/* Menu items */}
           <div className={`lg:flex lg:items-center lg:space-x-4 ${isOpen ? 'block' : 'hidden'} w-full lg:w-auto justify-center`}>
-            <Link
-              to="home"
+            <a
+              href="#profile"
               spy={true}
               smooth={true}
               className="text-gray-300 hover:text-gold hover:border-b-2 cursor-pointer block py-2"
               onClick={toggleMenu}
             >
               Home
-            </Link>
-            <Link
-              to="about"
+            </a>
+            <a
+              href="#education"
               spy={true}
               smooth={true}
               className="text-gray-300 hover:text-gold hover:border-b-2 cursor-pointer block py-2"
               onClick={toggleMenu}
             >
               Education
-            </Link>
-            <Link
-              to="services"
+            </a>
+            <a
+              href="#experience"
               spy={true}
               smooth={true}
               className="text-gray-300 hover:text-gold hover:border-b-2 cursor-pointer block py-2"
               onClick={toggleMenu}
             >
               Experience
-            </Link>
-            <Link
-              to="contact"
+            </a>
+            <a
+              href="#skills"
               spy={true}
               smooth={true}
               className="text-gray-300 hover:text-gold hover:border-b-2 cursor-pointer block py-2"
               onClick={toggleMenu}
             >
               Skills
-            </Link>
-            <Link
-              to="projects"
+            </a>
+            <a
+              href="#projects"
               spy={true}
               smooth={true}
               className="text-gray-300 hover:text-gold hover:border-b-2 cursor-pointer block py-2"
               onClick={toggleMenu}
             >
               Projects
-            </Link>
+            </a>
+            <a
+              href="#contact"
+              spy={true}
+              smooth={true}
+              className="text-gray-300 hover:text-gold hover:border-b-2 cursor-pointer block py-2"
+              onClick={toggleMenu}
+            >
+              Contact
+            </a>
           </div>
         </div>
       </div>

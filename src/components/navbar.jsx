@@ -46,8 +46,6 @@ const Navbar = () => {
           <div className={`lg:flex lg:items-center lg:space-x-4 ${isOpen ? 'block' : 'hidden'} w-full lg:w-auto justify-center`}>
             <a
               href="#profile"
-              spy={true}
-              smooth={true}
               className="text-gray-300 hover:text-gold hover:border-b-2 cursor-pointer block py-2"
               onClick={toggleMenu}
             >
@@ -55,8 +53,6 @@ const Navbar = () => {
             </a>
             <a
               href="#education"
-              spy={true}
-              smooth={true}
               className="text-gray-300 hover:text-gold hover:border-b-2 cursor-pointer block py-2"
               onClick={toggleMenu}
             >
@@ -64,8 +60,6 @@ const Navbar = () => {
             </a>
             <a
               href="#experience"
-              spy={true}
-              smooth={true}
               className="text-gray-300 hover:text-gold hover:border-b-2 cursor-pointer block py-2"
               onClick={toggleMenu}
             >
@@ -73,8 +67,6 @@ const Navbar = () => {
             </a>
             <a
               href="#skills"
-              spy={true}
-              smooth={true}
               className="text-gray-300 hover:text-gold hover:border-b-2 cursor-pointer block py-2"
               onClick={toggleMenu}
             >
@@ -82,8 +74,6 @@ const Navbar = () => {
             </a>
             <a
               href="#projects"
-              spy={true}
-              smooth={true}
               className="text-gray-300 hover:text-gold hover:border-b-2 cursor-pointer block py-2"
               onClick={toggleMenu}
             >
@@ -91,8 +81,6 @@ const Navbar = () => {
             </a>
             <a
               href="#contact"
-              spy={true}
-              smooth={true}
               className="text-gray-300 hover:text-gold hover:border-b-2 cursor-pointer block py-2"
               onClick={toggleMenu}
             >

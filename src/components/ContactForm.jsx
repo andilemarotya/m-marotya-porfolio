@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 const ContactForm = () => {
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -12,10 +13,36 @@ const ContactForm = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData); // For demonstration, log form data to console
-    setFormData({ name: '', email: '', message: '' });
+
+    const apiUrl = 'http://localhost:8080'; // Backend API base URL
+
+    try {
+      const response = await fetch(`${apiUrl}/sendEmail`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
+      });
+
+      if (response.ok) {
+        console.log('Email sent successfully!');
+        // Optionally, display a success message or reset the form
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        console.error('Failed to send email');
+        // Optionally, handle errors (e.g., display an error message to the user)
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+      // Handle network errors or other exceptions
+    }
   };
 
   return (

@@ -16,7 +16,7 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const apiUrl = 'http://localhost:8080'; // Backend API base URL
+    const apiUrl = 'https://portfolio-server-uy78.onrender.com'; // Backend API base URL
 
     try {
       const response = await fetch(`${apiUrl}/sendEmail`, {

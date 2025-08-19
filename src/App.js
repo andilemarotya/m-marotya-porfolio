@@ -9,33 +9,46 @@ import Projects from './pages/Projects';
 import {BrowserRouter as Router, Route, Routes,} from 'react-router-dom';
 import Footer from './components/footer';
 import ContactForm from './components/ContactForm';
+import FarCastPage from './pages/FarCastPage';
 
 
 function App() {
   return (
-    <div>
+    <Router>
       <Navbar />
-      <div id="profile">
-        <Profile />
-      </div>
-      <div id="education">
-        <Education />
-      </div>
-      <div id="experience">
-        <Experience />
-      </div>
-      <div id="skills">
-        <Skills />
-      </div>
-      <div id="projects">
-        <Projects />
-      </div>
-      <div id="contact">
-        <ContactForm />
-      </div>
-      <Footer />
+      <Routes>
+        {/* Home Page (your portfolio sections) */}
+        <Route
+          path="/"
+          element={
+            <>
+              <div id="profile">
+                <Profile />
+              </div>
+              <div id="education">
+                <Education />
+              </div>
+              <div id="experience">
+                <Experience />
+              </div>
+              <div id="skills">
+                <Skills />
+              </div>
+              <div id="projects">
+                <Projects />
+              </div>
+              <div id="contact">
+                <ContactForm />
+              </div>
+              <Footer />
+            </>
+          }
+        />
 
-    </div>
+        {/* FarCast Game Page */}
+        <Route path="/farcast" element={<FarCastPage />} />
+      </Routes>
+    </Router>
   );
 }
 

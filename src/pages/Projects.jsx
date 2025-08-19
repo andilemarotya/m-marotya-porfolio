@@ -1,6 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Projects = () => {
+  const navigate = useNavigate();
+
   return (
     <div className='bg-black min-h-40 flex flex-col justify-center items-center text-white text-[Inter]'>
       <hr className='bg-white w-[90%] my-5' />
@@ -10,9 +13,9 @@ const Projects = () => {
       <div className='mt-6 w-[90%] max-w-screen-lg ml-4 mb-8'>
         {/* Games */}
         <h1 className='text-gold my-8'>Games:</h1>
-        <div className='flex justify-between mb-8'>
+        <div className='grid grid-cols-2 gap-8 mb-4'>
           {/* Angry Balls */}
-          <div className='project-item bg-[#2B2924] border border-black rounded-xl p-3 w-[30%]'>
+          <div className='project-item bg-[#2B2924] border border-black rounded-xl p-3 w-[80%]'>
             <iframe
               title='Angry Balls Video'
               src='https://drive.google.com/file/d/120IELQKlQp0o5n6SvZ5tM-HAZReeoiTX/preview'
@@ -27,8 +30,20 @@ const Projects = () => {
               <button className='block mx-auto bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>Download</button>
             </a>
           </div>
+
+          {/* FarCast */}
+          <div className='project-item bg-[#2B2924] border border-black rounded-xl p-3 w-[80%]'>
+            <p className='my-5 text-center'><img src={`${process.env.PUBLIC_URL}/images/FarcastLogo.png`} alt='Farcast' className='w-full h-auto mx-auto' /></p>
+            <button
+              onClick={() => navigate("/farcast")}
+              className='block mx-auto bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'
+            >
+              View Game
+            </button>
+          </div>
+
           {/* Color Blender */}
-          <div className='project-item bg-[#2B2924] border border-black rounded-xl p-3 w-[30%]'>
+          <div className='project-item bg-[#2B2924] border border-black rounded-xl p-3 w-[80%]'>
             <iframe
               title='Color Blender Video'
               src='https://drive.google.com/file/d/1qO6h2sC4mkGOs331BOKvLkd5rkJifkeJ/preview'
@@ -43,8 +58,9 @@ const Projects = () => {
               <button className='block mx-auto bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>Download</button>
             </a>
           </div>
+
           {/* Dodging blocks */}
-          <div className='project-item bg-[#2B2924] border border-black rounded-xl p-3 w-[30%]'>
+          <div className='project-item bg-[#2B2924] border border-black rounded-xl p-3 w-[80%]'>
             <iframe
               title='Dodging Blocks Video'
               src='https://drive.google.com/file/d/1H7YIheD4VjjQy3GUH8yfOX80pRXQQEXc/preview'

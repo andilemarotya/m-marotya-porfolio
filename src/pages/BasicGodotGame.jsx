@@ -47,7 +47,7 @@ export default function BasicGodotGame() {
           <button
             onClick={() =>
               window.open(
-                "https://drive.google.com/file/d/1N4g49_KRU3-dqJV1XqPfcDj-ZhbTQ8yx/view?usp=drive_link",
+                "https://drive.google.com/file/d/12X5Ob3kdxp85_tzCLz8yWOOal8ymz8Mh/view?usp=drive_link",
                 "_blank"
               )
             }

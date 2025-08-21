@@ -99,6 +99,9 @@ export default function FarCastPage() {
           FarCast is a game-based course, that focuses on primary school kids that are under the CAPS syllabus from grade 4 to grade 7.
           The game initially had math and Social Sciences related games.
         </p>
+        <p className="mb-6 text-center">
+          Developed using Godot 4.1 and GdScript
+        </p>
 
         {/* Action buttons */}
         <div className="flex justify-center gap-4">

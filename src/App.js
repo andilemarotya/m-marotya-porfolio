@@ -10,6 +10,7 @@ import {BrowserRouter as Router, Route, Routes,} from 'react-router-dom';
 import Footer from './components/footer';
 import ContactForm from './components/ContactForm';
 import FarCastPage from './pages/FarCastPage';
+import BasicGodotGame from './pages/BasicGodotGame';
 
 
 function App() {
@@ -45,8 +46,9 @@ function App() {
           }
         />
 
-        {/* FarCast Game Page */}
+        {/* Godot Game Pages */}
         <Route path="/farcast" element={<FarCastPage />} />
+        <Route path="/godotprac" element={<BasicGodotGame />} />
       </Routes>
     </Router>
   );

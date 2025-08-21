@@ -21,7 +21,7 @@ const Skills = () => {
         const imageUrl = `/images/skills/${fileName}`; // Construct the image URL
         return (
           <div key={index} className="flex justify-center items-center w-1/7 p-2">
-            <img src={imageUrl} alt={`Image ${index}`} className="max-w-full h-auto sm:max-w-xs" />
+            <img src={imageUrl} alt='error loading img' className="max-w-full h-auto sm:max-w-xs" />
           </div>
         );
       });

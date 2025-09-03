@@ -42,6 +42,18 @@ const Projects = () => {
             </button>
           </div>
 
+          {/* FarCast */}
+          <div className='project-item bg-[#2B2924] border border-black rounded-xl p-3 w-[80%]'>
+            <h1 className='text-center text-gold w-full font-bold text-lg'>BANANA SOLVER</h1>
+            <p className='my-5 text-center'><img src={`${process.env.PUBLIC_URL}/images/BananaGame/banana.png`} alt='BananaLogo' className='w-[50%] h-auto mx-auto' /></p>
+            <button
+              onClick={() => navigate("/bananasolver")}
+              className='block mx-auto bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'
+            >
+              View Game
+            </button>
+          </div>
+
           {/* Godotprac1 */}
           <div className='project-item bg-[#2B2924] border border-black rounded-xl p-3 w-[80%]'>
             <h1 className='text-center text-gold w-full font-bold text-lg'>Godot mini basic game</h1>

@@ -11,6 +11,7 @@ import Footer from './components/footer';
 import ContactForm from './components/ContactForm';
 import FarCastPage from './pages/FarCastPage';
 import BasicGodotGame from './pages/BasicGodotGame';
+import BananaSolver from './pages/BananaSolver';
 
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
         {/* Godot Game Pages */}
         <Route path="/farcast" element={<FarCastPage />} />
         <Route path="/godotprac" element={<BasicGodotGame />} />
+        <Route path="/bananasolver" element={<BananaSolver />} />
       </Routes>
     </Router>
   );
